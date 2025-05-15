@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+import image05 from '@images/post-05.png';
+
+---
+
+<MainLayout title="Imágenes">
+  <h1 class="text-5xl text-white">Original:</h1>
+  
+  <img src="/public/assets/images/post-05.png" alt="" width="250"/>
+  
+  <h1 class="text-5xl text-white">Quality low:</h1>
+  <Image
+    quality="low"
+    src={image05}
+    alt="PostImage" 
+    width={250}
+    height={250}
+  />
+  <h1 class="text-5xl text-white">Quality mid:</h1>
+  <Image
+    quality="mid"
+    src={image05}
+    alt="PostImage" 
+    width={250}
+    height={250}
+  />
+  <h1 class="text-5xl text-white">Quality high:</h1>
+  <Image
+    quality="high"
+    src={image05}
+    alt="PostImage" 
+    width={250}
+    height={250}
+  />
+  <h1 class="text-5xl text-white">Quality max:</h1>
+  <Image
+    quality="max"
+    src={image05}
+    alt="PostImage" 
+    width={250}
+    height={250}
+  />
+  
+</MainLayout>
